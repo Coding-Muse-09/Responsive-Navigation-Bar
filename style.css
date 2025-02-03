@@ -1,0 +1,53 @@
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    border: 2px solid black;
+}
+.menuList{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 20px;
+}
+nav{
+    display: flex;
+  align-items: center;
+}
+.menuList a{
+    text-decoration: none;
+    color: black;
+}
+.menuList a:hover{
+    text-decoration: underline;
+}
+.menuList a:active{
+    color: rgb(255, 255, 0);
+}
+.x , .bar{
+    display: none;
+}
+@media only screen and (max-width: 720px) {
+    .menuList{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 40px;
+        right: 20px;
+    } 
+    .menuList.active{
+        display: flex;
+    }  
+    .bar{
+        display: flex;
+    }
+    .bar.inactive{
+        display: none;
+    }
+    .x.active{
+        display: flex;
+    }
+    
+}
